@@ -46,7 +46,7 @@ async function createWindow() {
   win = new BrowserWindow({
     width: windowBounds[0],
     height: windowBounds[1],
-    title: "Main window",
+    title: require("../../package.json").windowName || "Window",
     icon: join(process.env.PUBLIC, "favicon.ico"),
     webPreferences: {
       preload,
